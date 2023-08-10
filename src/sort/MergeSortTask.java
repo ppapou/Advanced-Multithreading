@@ -4,17 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.RecursiveTask;
 
-//thread in Java, inherit OR create the Runnable
-//concurrency(synchronise vs locks)
-//fork/join pattern -> idea of this pattern
-//thread vs process vs virt threads
-//worker/pool/thread pattern(in concurrency see que and executers how it works!!)
-//stream API(non terminal and terminal operators in streams), the price of the parallel interface
-//completable future(callable interface vs runnable!)
-
-
-//OPTIONAL for FUTURE -> reactive framework(web-flux and functional programming/Reactive extension standard)
-class MergeSortTask extends RecursiveTask<int[]> {
+    class MergeSortTask extends RecursiveTask<int[]> {
 
     int[] arrayToDivide;
 
