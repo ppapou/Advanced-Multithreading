@@ -1,5 +1,3 @@
-package sort;
-
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.RecursiveTask;
@@ -21,9 +19,11 @@ import java.util.concurrent.RecursiveTask;
         if (arrayToDivide.length > 1) {
 
             List<int[]> partitionedArray = partitionArray();
+
             System.out.println("The First Element of partitioned array: " + Arrays.toString(partitionedArray.get(0)));
             System.out.println("The Second Element of partitioned array: " + Arrays.toString(partitionedArray.get(1)));
             System.out.println("Length of initial array: " + arrayToDivide.length);
+
             MergeSortTask task1 = new MergeSortTask(partitionedArray.get(0));
             MergeSortTask task2 = new MergeSortTask(partitionedArray.get(1));
             invokeAll(task1, task2);
