@@ -1,5 +1,3 @@
-package scanner;
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -32,13 +30,17 @@ public class FileCounterTask extends RecursiveTask<Long> {
      *
      * @return files number
      */
-    public long documentCount() {return mDocumentCount};
+    public AtomicLong documentCount() {
+        return mDocumentCount;
+    };
 
     /**
      *
      * @return directories number
      */
-    public long folderCount() {return mFolderCount};
+    public AtomicLong folderCount() {
+        return mFolderCount;
+    }
 
     @Override
     protected Long compute() {
