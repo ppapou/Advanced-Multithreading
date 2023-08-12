@@ -6,10 +6,10 @@ public class ApplyerTest {
     ForkJoinPool pool;
     double array [];
     @Test
-    double sumOfSquares() {
+    public void sumOfSquares() {
         int n = array.length;
         Applyer a = new Applyer(array, 0, n, null);
         pool.invoke(a);
-        return a.result;
+        System.out.println(a.result);
     }
 }
